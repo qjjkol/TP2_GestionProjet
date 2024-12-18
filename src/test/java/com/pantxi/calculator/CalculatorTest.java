@@ -8,10 +8,17 @@ public class CalculatorTest {
 
 
     @Test
+
     public void testAddition() {
-        Calculator calculator = new Calculator();
-        int result = calculator.add(2, 3);
-        assertEquals(5, result, "2 + 3 doit être égal à 5");
+        assertEquals(8, Calculator.addition(5, 3));
+        assertEquals(0, Calculator.addition(-5, 5));
+        assertEquals(-2, Calculator.addition(-1, -1));
+    }
+    @Test
+    public void testDivision() {
+        assertEquals(5.0, Calculator.division(10, 2));
+        assertEquals(2.5, Calculator.division(5, 2));
+        assertEquals(-5.0, Calculator.division(-10, 2));
     }
 
 
